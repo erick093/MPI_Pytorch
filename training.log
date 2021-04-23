@@ -1,0 +1,216 @@
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 500
+INFO:Herbarium_R1:_Files Received: 500
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 45.281683921813965
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 45.022461891174316
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 38.393168449401855
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 38.73208141326904
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 500
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R1:_Files Received: 500
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 500
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R1:_Files Received: 500
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 44.825124740600586 | Time: 103.47813380003208
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 45.102633476257324 | Time: 103.4880828000023
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 38.4378719329834 | Time: 71.13101220002864
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 38.166184425354004 | Time: 71.14968699996825
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 250
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R2:_Files Received: 250
+INFO:Herbarium_R0:_Files Received: 250
+INFO:Herbarium_R3:_Loader Created
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R3:_Model loaded
+INFO:Herbarium_R2:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Epoch: 0 | Loss: 22.62895679473877 | Time: 72.62563790002605
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 22.510679244995117 | Time: 72.66947810002603
+INFO:Herbarium_R3:_Epoch: 0 | Loss: 22.414849281311035 | Time: 72.66891169996234
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 22.53164291381836 | Time: 72.8996993000037
+INFO:Herbarium_R2:_Epoch: 1 | Loss: 20.48896312713623 | Time: 74.3440566000063
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 20.343406677246094 | Time: 74.58950499998173
+INFO:Herbarium_R3:_Epoch: 1 | Loss: 20.26823139190674 | Time: 74.78532850003103
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 20.388358116149902 | Time: 74.80275050003547
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 250
+INFO:Herbarium_R2:_Files Received: 250
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R3:_Files Received: 250
+INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R3:_Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R3:_Model loaded
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R2:_Model loaded
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 500
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.24757981300354 | Time: 146.16582459999972
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 11.22661304473877 | Time: 146.1727465999993
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 9.53631591796875 | Time: 63.10681359999944
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 9.56389307975769 | Time: 63.14443420000043
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 333
+INFO:Herbarium_R0:_Loader Created
+333
+INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R2:_Epoch: 0 | Loss: 11.201739629109701 | Time: 83.11951339999996
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 11.26898988087972 | Time: 83.15705220000018
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.229727745056152 | Time: 83.29408770000009
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 9.877570470174154 | Time: 74.64031049999994
+INFO:Herbarium_R2:_Epoch: 1 | Loss: 9.815591176350912 | Time: 74.70758800000021
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 9.834344228108725 | Time: 74.65720019999935
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 333
+INFO:Herbarium_R0:_Loader Created
+333
+INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R2:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Epoch: 0 | Loss: 11.255485852559408 | Time: 90.15183950000028
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 11.177796999613443 | Time: 90.17154169999958
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.265612602233887 | Time: 90.17399049999949
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 9.827041625976562 | Time: 78.64994399999978
+INFO:Herbarium_R2:_Epoch: 1 | Loss: 9.806683222452799 | Time: 78.68961799999943
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 9.714744885762533 | Time: 78.6790630000005
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 250
+INFO:Herbarium_R1:_Loader Created
+250
+INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R0:_Loader Created
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R3:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.238691806793213 | Time: 76.01716420000048
+INFO:Herbarium_R2:_Epoch: 0 | Loss: 11.275430679321289 | Time: 76.08741149999969
+INFO:Herbarium_R3:_Epoch: 0 | Loss: 11.249192714691162 | Time: 76.11451059999945
+INFO:Herbarium_R2:_Epoch: 1 | Loss: 10.166168689727783 | Time: 83.0014412999999
+INFO:Herbarium_R3:_Epoch: 1 | Loss: 10.175942420959473 | Time: 82.9865807999995
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 10.20115327835083 | Time: 83.08226389999982
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 10.123162269592285 | Time: 83.1122833999998
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 167
+INFO:Herbarium_R2:_Files Received: 167
+INFO:Herbarium_R0:_Files Received: 167
+INFO:Herbarium_R4:_Files Received: 166
+INFO:Herbarium_R3:_Files Received: 167
+INFO:Herbarium_R1:_Loader Created
+INFO:Herbarium_R5:_Files Received: INFO:Herbarium_R2:_Loader Created
+INFO:Herbarium_R5:_Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R5:_Model Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R4:_Model Created
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R3:_Model loaded
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R5:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R4:_Model loaded
+INFO:Herbarium_R5:_Optimizer Created
+INFO:Herbarium_R4:_Optimizer Created
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 11.222954750061035 | Time: 83.96430730000066
+INFO:Herbarium_R3:_Epoch: 0 | Loss: 11.27460241317749 | Time: 83.93414620000021
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.347415924072266 | Time: 83.9306704999999
+INFO:Herbarium_R5:_Epoch: 0 | Loss: 11.231712341308594 | Time: 83.93900899999971
+INFO:Herbarium_R2:_Epoch: 0 | Loss: 11.199236392974854 | Time: 83.9402769999997
+INFO:Herbarium_R4:_Epoch: 0 | Loss: 11.171619415283203 | Time: 83.9404070999999
+INFO:Herbarium_R4:_Epoch: 1 | Loss: 10.079964637756348 | Time: 96.36743089999982
+INFO:Herbarium_R5:_Epoch: 1 | Loss: 10.01044511795044 | Time: 96.38894160000018
+INFO:Herbarium_R2:_Epoch: 1 | Loss: 10.10462236404419 | Time: 96.3897952999996
+INFO:Herbarium_R3:_Epoch: 1 | Loss: 10.149336338043213 | Time: 96.40898669999933
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 10.08777379989624 | Time: 96.40639209999972
