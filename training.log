@@ -214,3 +214,406 @@ INFO:Herbarium_R5:_Epoch: 1 | Loss: 10.01044511795044 | Time: 96.38894160000018
 INFO:Herbarium_R2:_Epoch: 1 | Loss: 10.10462236404419 | Time: 96.3897952999996
 INFO:Herbarium_R3:_Epoch: 1 | Loss: 10.149336338043213 | Time: 96.40898669999933
 INFO:Herbarium_R0:_Epoch: 1 | Loss: 10.08777379989624 | Time: 96.40639209999972
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R1:_Files Received: 500
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R1:_Files Received: 1000
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+2500   images/447/16/298706.jpg    1000  ...        44716               0
+2501   images/244/58/447417.jpg    1000  ...        24458               0
+2502  images/623/20/1650321.jpg    1000  ...        62320               0
+2503  images/439/65/1975360.jpg    1000  ...        43965               3
+2504  images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+4995  images/010/08/2066660.jpg    1000  ...         1008               0
+4996  images/477/02/1792659.jpg    1000  ...        47702               0
+4997  images/050/35/1343405.jpg    1000  ...         5035               3
+4998   images/400/66/598782.jpg    1000  ...        40066               4
+4999   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns]
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns]
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns]
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/447/16/298706.jpg    1000  ...        44716               0
+1      images/244/58/447417.jpg    1000  ...        24458               0
+2     images/623/20/1650321.jpg    1000  ...        62320               0
+3     images/439/65/1975360.jpg    1000  ...        43965               3
+4     images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+2495  images/010/08/2066660.jpg    1000  ...         1008               0
+2496  images/477/02/1792659.jpg    1000  ...        47702               0
+2497  images/050/35/1343405.jpg    1000  ...         5035               3
+2498   images/400/66/598782.jpg    1000  ...        40066               4
+2499   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns]
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns]
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:val index:[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R0:__TEST:val index:[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R0:__TEST:val index:[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/447/16/298706.jpg    1000  ...        44716               0
+1      images/244/58/447417.jpg    1000  ...        24458               0
+2     images/623/20/1650321.jpg    1000  ...        62320               0
+3     images/439/65/1975360.jpg    1000  ...        43965               3
+4     images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+2495  images/010/08/2066660.jpg    1000  ...         1008               0
+2496  images/477/02/1792659.jpg    1000  ...        47702               0
+2497  images/050/35/1343405.jpg    1000  ...         5035               3
+2498   images/400/66/598782.jpg    1000  ...        40066               4
+2499   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:__TEST:val index:[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R1:__TEST:val index:[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R0:__TEST:val index:[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R1:__TEST:val index:[   1    5    7 ... 2497 2498 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/447/16/298706.jpg    1000  ...        44716               0
+1      images/244/58/447417.jpg    1000  ...        24458               0
+2     images/623/20/1650321.jpg    1000  ...        62320               0
+3     images/439/65/1975360.jpg    1000  ...        43965               3
+4     images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+2495  images/010/08/2066660.jpg    1000  ...         1008               0
+2496  images/477/02/1792659.jpg    1000  ...        47702               0
+2497  images/050/35/1343405.jpg    1000  ...         5035               3
+2498   images/400/66/598782.jpg    1000  ...        40066               4
+2499   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:__TEST:val index fold(0):[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R0:__TEST:val index fold(1):[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R1:__TEST:val index fold(0):[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R1:__TEST:val index fold(1):[   1    5    7 ... 2497 2498 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+2500   images/447/16/298706.jpg    1000  ...        44716               0
+2501   images/244/58/447417.jpg    1000  ...        24458               0
+2502  images/623/20/1650321.jpg    1000  ...        62320               0
+2503  images/439/65/1975360.jpg    1000  ...        43965               3
+2504  images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+4995  images/010/08/2066660.jpg    1000  ...         1008               0
+4996  images/477/02/1792659.jpg    1000  ...        47702               0
+4997  images/050/35/1343405.jpg    1000  ...         5035               3
+4998   images/400/66/598782.jpg    1000  ...        40066               4
+4999   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R1:__TEST:val index fold(0):[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R0:__TEST:val index fold(0):[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R0:__TEST:val index fold(1):[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+2500   images/447/16/298706.jpg    1000  ...        44716               0
+2501   images/244/58/447417.jpg    1000  ...        24458               0
+2502  images/623/20/1650321.jpg    1000  ...        62320               0
+2503  images/439/65/1975360.jpg    1000  ...        43965               3
+2504  images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+4995  images/010/08/2066660.jpg    1000  ...         1008               0
+4996  images/477/02/1792659.jpg    1000  ...        47702               0
+4997  images/050/35/1343405.jpg    1000  ...         5035               3
+4998   images/400/66/598782.jpg    1000  ...        40066               4
+4999   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:val index fold(0):[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R0:__TEST:val index fold(0):[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R0:__TEST:val index fold(1):[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:LabelEncoder Instance created 
+INFO:Herbarium_R0:Fitting the LabelEncoder Instance
+INFO:Herbarium_R0:Converting Labels to Normalized Encoding
+INFO:Herbarium_R0:_Files Received: 2500
+INFO:Herbarium_R1:_Files Received: 2500
+INFO:Herbarium_R0:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/586/80/527830.jpg    1000  ...        58680               0
+1     images/033/58/1766903.jpg    1000  ...         3358               0
+2      images/121/68/699791.jpg    1000  ...        12168               0
+3      images/254/51/354711.jpg    1000  ...        25451               0
+4      images/265/77/280347.jpg    1000  ...        26577               0
+...                         ...     ...  ...          ...             ...
+2495  images/004/59/1696585.jpg    1000  ...          459               3
+2496   images/104/39/378730.jpg    1000  ...        10439               0
+2497  images/166/61/1231241.jpg    1000  ...        16661               2
+2498   images/562/58/331947.jpg    1000  ...        56258               0
+2499   images/231/69/980340.jpg    1000  ...        23169               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R0:Creating StratifiedKFold Instance
+INFO:Herbarium_R0:Creating Splits
+INFO:Herbarium_R1:__TEST:RECEIVED:                      file_name  height  ...  category_id  institution_id
+0      images/447/16/298706.jpg    1000  ...        44716               0
+1      images/244/58/447417.jpg    1000  ...        24458               0
+2     images/623/20/1650321.jpg    1000  ...        62320               0
+3     images/439/65/1975360.jpg    1000  ...        43965               3
+4     images/219/55/1030878.jpg    1000  ...        21955               0
+...                         ...     ...  ...          ...             ...
+2495  images/010/08/2066660.jpg    1000  ...         1008               0
+2496  images/477/02/1792659.jpg    1000  ...        47702               0
+2497  images/050/35/1343405.jpg    1000  ...         5035               3
+2498   images/400/66/598782.jpg    1000  ...        40066               4
+2499   images/529/24/647509.jpg    1000  ...        52924               0
+
+[2500 rows x 7 columns], type<class 'pandas.core.frame.DataFrame'>
+INFO:Herbarium_R1:Creating StratifiedKFold Instance
+INFO:Herbarium_R1:Creating Splits
+INFO:Herbarium_R0:__TEST:val index fold(0):[   0    1    3 ... 2494 2496 2498]
+INFO:Herbarium_R0:__TEST:val index fold(1):[   2    4    6 ... 2495 2497 2499]
+INFO:Herbarium_R1:__TEST:val index fold(0):[   0    2    3 ... 2491 2494 2496]
+INFO:Herbarium_R1:__TEST:val index fold(1):[   1    5    7 ... 2497 2498 2499]
+INFO:Herbarium_R0:_Training Dataset Object Created 
+INFO:Herbarium_R0:_Validation Dataset Object Created 
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created 
+INFO:Herbarium_R1:_Validation Dataset Object Created 
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Validation Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R0:_Model loaded
+INFO:Herbarium_R1:_Model loaded
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Epoch: 0 | Loss: 11.256156826019287 | Accuracy: 0.0
+INFO:Herbarium_R1:_Epoch: 0 | Loss: 11.258639907836914 | Accuracy: 0.0
+INFO:Herbarium_R1:_Epoch: 1 | Loss: 8.901011753082276 | Accuracy: 0.0
+INFO:Herbarium_R0:_Epoch: 1 | Loss: 8.908576583862304 | Accuracy: 0.0008

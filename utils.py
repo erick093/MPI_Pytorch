@@ -3,7 +3,7 @@ Utils.py
 """
 DEBUG = True
 NUM_CLASSES = 64500
-N_IMAGES = 1000
+N_IMAGES = 5000
 """
 Directories
 """

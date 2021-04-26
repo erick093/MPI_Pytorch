@@ -10,6 +10,7 @@ import sklearn  # For LabelEncoder and Metrics
 from sklearn import preprocessing  # For the 🏷 Label Encoder
 import albumentations  # For Image Augmentations
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedKFold  # For Cross Validation
 from torchvision import models, transforms
 import utils
 import torch
@@ -19,6 +20,7 @@ import torch.optim as optim
 from albumentations.pytorch import ToTensorV2  # For Converting to torch.Tensor
 from data_loader import GetData
 import mpi_tools
+
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()  # process rank
 size = comm.Get_size()  # number of workers
@@ -72,11 +74,25 @@ def create_dataframe(ann_file):
     return df
 
 
+def create_kfolds(df):
+    LOGGER.info("__TEST:RECEIVED:{}, type{}".format(df, type(df)))
+    train_labels = df['category_id'].values
+    LOGGER.info("Creating StratifiedKFold Instance")
+    kf = StratifiedKFold(n_splits=2)
+    LOGGER.info("Creating Splits")
+    for fold, (train_index, val_index) in enumerate(kf.split(df.values, train_labels)):
+        LOGGER.info("__TEST:val index fold({}):{}".format(fold, val_index))
+        df.loc[val_index, 'fold'] = int(fold)
+    df['fold'] = df['fold'].astype(int)
+    FOLD = 0
+    train_idx = df[df['fold'] != FOLD].index
+    val_idx = df[df['fold'] == FOLD].index
+    return train_idx, val_idx
+
+
 def main():
     device = 'cpu'  # don't use cuda, causes an O.S crash
     torch.set_num_threads(1)
-    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    # LOGGER.info("Device Loaded: {}".format(device))
     filenames_to_scatter = None
     Transform = transforms.Compose(
         [transforms.ToTensor(),
@@ -88,18 +104,32 @@ def main():
         LOGGER.info("JSON Train File Read")
         train_df = create_dataframe(ann_file)
         LOGGER.info("Train DataFrame Created")
+        encoder = preprocessing.LabelEncoder()
+        LOGGER.info("LabelEncoder Instance created ")
+        LOGGER.info("Fitting the LabelEncoder Instance")
+        encoder.fit(train_df['category_id'])
+        LOGGER.info("Converting Labels to Normalized Encoding")
+        train_df['category_id'] = encoder.transform(train_df['category_id'])
         if utils.DEBUG:
             folds = train_df.sample(utils.N_IMAGES, random_state=0).reset_index(drop=True).copy()
         else:
             folds = train_df.copy()
         filenames_to_scatter = np.array_split(folds, size)
 
-    my_filenames = comm.scatter(filenames_to_scatter, root=0)
-    LOGGER.info("_Files Received: {}".format(len(my_filenames)))
-    train_set = GetData(Dir=utils.TRAIN_DIR, FNames=my_filenames['file_name'].values,
-                        Labels=my_filenames['category_id'].values, Transform=Transform)
-    train_loader = DataLoader(train_set, batch_size=utils.BATCH_SIZE, shuffle=True)
-    LOGGER.info("_Loader Created")
+    img_filenames = comm.scatter(filenames_to_scatter, root=0)
+    img_filenames.reset_index(drop=True, inplace=True)
+    LOGGER.info("_Files Received: {}".format(len(img_filenames)))
+    train_idx, val_idx = create_kfolds(img_filenames)
+    train_set = GetData(Dir=utils.TRAIN_DIR, FNames=img_filenames.loc[train_idx]['file_name'].values,
+                        Labels=img_filenames.loc[train_idx]['category_id'].values, Transform=Transform)
+    LOGGER.info("_Training Dataset Object Created ")
+    val_set = GetData(Dir=utils.TRAIN_DIR, FNames=img_filenames.loc[val_idx]['file_name'].values,
+                      Labels=img_filenames.loc[val_idx]['category_id'].values, Transform=Transform)
+    LOGGER.info("_Validation Dataset Object Created ")
+    train_loader = DataLoader(train_set, batch_size=utils.BATCH_SIZE, shuffle=False)
+    LOGGER.info("_Training Loader Created")
+    val_loader = DataLoader(val_set, batch_size=utils.BATCH_SIZE, shuffle=False)
+    LOGGER.info("_Validation Loader Created")
     model = models.resnet34()
     LOGGER.info("_Model Created")
     model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
@@ -124,9 +154,19 @@ def main():
             optimizer.step()
             tr_loss += loss.detach().item()
         end_time = MPI.Wtime()
-        #model.eval()
-        LOGGER.info("_Epoch: {} | Loss: {} | Time: {}".format(epoch, tr_loss/len(train_loader), end_time - init_time))
-        #print('Epoch: %d | Loss: %.4f' % (epoch, tr_loss))
+
+        model.eval()
+        val_loss = 0
+        preds = np.zeros((len(val_set)))
+        for i, (images, labels) in enumerate(val_loader):
+            images = images.to(device)
+            labels = labels.to(device)
+            with torch.no_grad():
+                y_preds = model(images)
+            preds[i * utils.BATCH_SIZE: (i+1) * utils.BATCH_SIZE] = y_preds.argmax(1).to('cpu').numpy()
+        score = sklearn.metrics.accuracy_score(img_filenames.loc[val_idx]['category_id'].values, preds)
+        #LOGGER.info("_Epoch: {} | Loss: {} | Time: {}".format(epoch, tr_loss / len(train_loader), end_time - init_time))
+        LOGGER.info("_Epoch: {} | Loss: {} | Accuracy: {}".format(epoch, tr_loss / len(train_loader), score))
 
 
 if __name__ == '__main__':
