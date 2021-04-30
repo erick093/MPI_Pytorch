@@ -739,3 +739,408 @@ INFO:Herbarium_R3:_Epoch: 2 | Train Loss: 2.034073233604431 | Time: 117.59343800
 INFO:Herbarium_R0:_Checkpoint saved
 INFO:Herbarium_R0:_Evaluating model
 INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.1825
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 400
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.340466260910034 | Time: 181.5401484000031
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.206414461135864 | Time: 181.54007220000494
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.0
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 11.250515222549438 | Time: 222.15129369997885
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.0
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 400
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 400
+INFO:Herbarium_R1:_Files Received: 400
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 400
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R1:_Files Received: 400
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 400
+INFO:Herbarium_R0:_Training Dataset ObjeINFO:HerbariINFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R1:_Files Received: 267
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Dataset Object CINFO:Herbarium_R0:_Training Loader Created
+reated
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.251211484273275 | Time: 160.66287679993547
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 11.216890017191568 | Time: 160.67609630001243
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.276933670043945 | Time: 160.67835190007463
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.00125
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 9.846490224202475 | Time: 133.43687980005052
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 9.7145627339681 | Time: 133.4742961000884
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.756492614746094 | Time: 63.29021869995631
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.00125
+INFO:Herbarium_R1:_Epoch: 2 | Train Loss: 8.652060508728027 | Time: 134.36569590005092
+INFO:Herbarium_R2:_Epoch: 2 | Train Loss: 8.733635902404785 | Time: 134.33445379999466
+INFO:Herbarium_R0:_Epoch: 2 | Train Loss: 8.635725657145182 | Time: 64.56374160002451
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 2
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.00125
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R0:_Files Received: 267
+INFO:Herbarium_R2:_Files Received: 266
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R1:_Files Received: 267
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.269912401835123 | Time: 97.13482099992689
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.195892016092936 | Time: 97.13048130006064
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 11.296442985534668 | Time: 97.14770179998595
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.00125
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 9.790217399597168 | Time: 126.57987020001747
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 9.906868934631348 | Time: 126.57270010001957
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.764508883158365 | Time: 54.33784059993923
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.00125
+INFO:Herbarium_R1:_Epoch: 2 | Train Loss: 8.507079442342123 | Time: 128.2437348999083
+INFO:Herbarium_R0:_Epoch: 2 | Train Loss: 8.60056177775065 | Time: 61.32257069996558
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 2
+INFO:Herbarium_R2:_Epoch: 2 | Train Loss: 8.615912119547525 | Time: 128.25419610005338
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.0025
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R2:_Files Received: 266
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+reated
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R1:_Loading Checkpoint
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Loading Checkpoint
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Loading Checkpoint
+INFO:Herbarium_R2:_Checkpoint loaded
+INFO:Herbarium_R0:_Checkpoint loaded
+INFO:Herbarium_R1:_Checkpoint loaded
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 8.347944895426432 | Time: 96.44144800002687
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 8.580163955688477 | Time: 96.44759520003572
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 8.588466962178549 | Time: 96.45732940000016
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.00375
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 7.403357982635498 | Time: 57.904004400013946
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 7.1384358406066895 | Time: 129.4773617000319
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 7.353506882985433 | Time: 129.47027120005805
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.01
+INFO:Herbarium_R2:_Epoch: 2 | Train Loss: 6.823446591695149 | Time: 142.39557479997166
+INFO:Herbarium_R0:_Epoch: 2 | Train Loss: 6.740187644958496 | Time: 67.48668430000544
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 2
+INFO:Herbarium_R1:_Epoch: 2 | Train Loss: 7.0218399365743 | Time: 142.4135087999748
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.0175
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R2:_Files Received: 266
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+ Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R1:_Loading Checkpoint
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Loading Checkpoint
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Loading Checkpoint
+INFO:Herbarium_R1:_Checkpoint loaded
+INFO:Herbarium_R2:_Checkpoint loaded
+INFO:Herbarium_R0:_Checkpoint loaded
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 7.199743270874023 | Time: 88.58339569997042
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+911133 | Time: 88.59025270002894
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.0125
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 6.072023073832194 | Time: 120.8797162999399
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 5.633276621500651 | Time: 59.25706199998967
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.0275
+INFO:Herbarium_R0:_Epoch: 2 | Train Loss: 5.652302265167236 | Time: 53.46081439999398
+
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 2
+INFO:Herbarium_R1:_Epoch: 2 | Train Loss: 5.573050181070964 | Time: 118.78321340004914
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.03625
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R2:_Files Received: 200
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+
+INFO:Herbarium_R3:_Training Dataset Object CreINFO:HINFO:Herbarium_R2:_Training Loader CreINFO:Herbarium_R3:_Training Loader Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Loading Checkpoint
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Loading Checkpoint
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R1:_Loading Checkpoint
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R3:_Loading Checkpoint
+INFO:Herbarium_R3:_Checkpoint loaded
+INFO:Herbarium_R1:_Checkpoint loaded
+INFO:Herbarium_R0:_Checkpoint loaded
+INFO:Herbarium_R2:_Checkpoint loaded
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 5.27150559425354 | Time: 116.71075809991453
+
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 5.07835841178894 | Time: 116.72923759999685
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.05125
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 4.867013931274414 | Time: 125.95927630004007
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 4.812162399291992 | Time: 48.72800850006752
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 4.683056116104126 | Time: 125.95094660005998
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R3:_Epoch: 1 | Train Loss: 4.842706918716431 | Time: 125.97343420004472
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.1025
+INFO:Herbarium_R3:_Epoch: 2 | Train Loss: 4.330172538757324 | Time: 135.91388440004084
+INFO:Herbarium_R0:_Epoch: 2 | Train Loss: 4.35576868057251 | Time: 50.33254390000366
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 2
+INFO:Herbarium_R2:_Epoch: 2 | Train Loss: 4.141515851020813 | Time: 135.94262939994223
+INFO:Herbarium_R1:_Epoch: 2 | Train Loss: 4.339213132858276 | Time: 136.26223889994435
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 2 | Acc: 0.1825
+INFO:Herbarium_R1:_Epoch: 3 | Train Loss: 3.740615725517273 | Time: 133.81619030004367
+INFO:Herbarium_R3:_Epoch: 3 | Train Loss: 3.7432624101638794 | Time: 134.16510580002796
+INFO:Herbarium_R0:_Epoch: 3 | Train Loss: 3.810142397880554 | Time: 52.44238929997664
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 3
+INFO:Herbarium_R2:_Epoch: 3 | Train Loss: 3.6308295726776123 | Time: 134.15644600009546
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 3 | Acc: 0.27125
+INFO:Herbarium_R2:_Epoch: 4 | Train Loss: 3.0806798934936523 | Time: 130.96275469998363
+INFO:Herbarium_R0:_Epoch: 4 | Train Loss: 3.2336896657943726 | Time: 50.19852430000901
+INFO:Herbarium_R3:_Epoch: 4 | Train Loss: 3.1945327520370483 | Time: 130.99834119994193
+INFO:Herbarium_R1:_Epoch: 4 | Train Loss: 3.233357071876526 | Time: 131.01147360005416
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 4
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 4 | Acc: 0.39
+INFO:Herbarium_R1:_Epoch: 5 | Train Loss: 2.703625202178955 | Time: 136.53242469998077
+INFO:Herbarium_R0:_Epoch: 5 | Train Loss: 2.705199360847473 | Time: 50.74708500003908
+INFO:Herbarium_R2:_Epoch: 5 | Train Loss: 2.4985631704330444 | Time: 136.569254299975
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 5
+INFO:Herbarium_R3:_Epoch: 5 | Train Loss: 2.70022451877594 | Time: 136.55782630003523
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 5 | Acc: 0.6125
+INFO:Herbarium_R1:_Epoch: 6 | Train Loss: 2.13810932636261 | Time: 138.8667054999387
+INFO:Herbarium_R0:_Epoch: 6 | Train Loss: 2.219466805458069 | Time: 57.13474269991275
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 6
+INFO:Herbarium_R3:_Epoch: 6 | Train Loss: 2.1464890241622925 | Time: 138.84741869999561
+INFO:Herbarium_R2:_Epoch: 6 | Train Loss: 2.108008027076721 | Time: 138.85409579996485
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 6 | Acc: 0.7925
+INFO:Herbarium_R0:_Epoch: 7 | Train Loss: 1.733886182308197 | Time: 49.973870799993165
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 7
+INFO:Herbarium_R2:_Epoch: 7 | Train Loss: 1.6782240271568298 | Time: 133.54019219998736
+INFO:Herbarium_R1:_Epoch: 7 | Train Loss: 1.87021005153656 | Time: 133.55863119999412
+INFO:Herbarium_R3:_Epoch: 7 | Train Loss: 1.7090614438056946 | Time: 133.57040570001118
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 7 | Acc: 0.905
+INFO:Herbarium_R3:_Epoch: 8 | Train Loss: 1.2335022687911987 | Time: 130.446445700014
+INFO:Herbarium_R0:_Epoch: 8 | Train Loss: 1.3520439267158508 | Time: 48.85570519999601
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 8
+INFO:Herbarium_R1:_Epoch: 8 | Train Loss: 1.3034329414367676 | Time: 130.4879558000248
+INFO:Herbarium_R2:_Epoch: 8 | Train Loss: 1.1932035088539124 | Time: 130.50487509998493
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 8 | Acc: 0.95875
+INFO:Herbarium_R0:_Epoch: 9 | Train Loss: 1.0044377744197845 | Time: 52.45660729997326
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 9
+INFO:Herbarium_R1:_Epoch: 9 | Train Loss: 0.9631448090076447 | Time: 140.18004749994725
+INFO:Herbarium_R3:_Epoch: 9 | Train Loss: 0.9745608270168304 | Time: 140.19577619992197
+INFO:Herbarium_R2:_Epoch: 9 | Train Loss: 0.8851695954799652 | Time: 140.16455210000277
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 9 | Acc: 0.98625
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:JSON Train File Read
+INFO:Herbarium_R0:Train DataFrame Created
+INFO:Herbarium_R2:_Files Received: 266
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R0:_Training Loader Created
+reated
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R0:_Loading Checkpoint
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R2:_Loading Checkpoint
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R1:_Loading Checkpoint
+INFO:Herbarium_R2:_Checkpoint loaded
+INFO:Herbarium_R1:_Checkpoint loaded
+INFO:Herbarium_R0:_Checkpoint loaded
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 1.7583949565887451 | Time: 83.85379570000805
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 1.741865833600362 | Time: 83.874896000023
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 1.999825080235799 | Time: 83.88390459993389
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.8625
