@@ -95,20 +95,25 @@ def main():
     #     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     #      ])
     if rank == 0:
-        train_input_file = utils.TRAIN_DIR + utils.TRAIN_FILE
-        ann_file = read_json(train_input_file)
-        LOGGER.info("JSON Train File Read")
-        train_df = create_dataframe(ann_file)
-        LOGGER.info("Train DataFrame Created")
+        # train_input_file = utils.TRAIN_DIR + utils.TRAIN_FILE
+        # ann_file = read_json(train_input_file)
+        # LOGGER.info("JSON Train File Read")
+        # train_df = create_dataframe(ann_file)
+        # LOGGER.info("Train DataFrame Created")
 
         if utils.DEBUG:
-            sample = train_df.sample(utils.N_IMAGES, random_state=0).reset_index(drop=True).copy()
+            df_test = pd.read_csv("./data/test_sample.csv")
+            sample = df_test.sample(1000, random_state=0).reset_index(drop=True).copy()
             train_sample, test_sample = train_test_split(sample, test_size=0.2).copy()
-            test_sample.to_csv('./data/test_sample.csv')
-            train_sample.to_csv('./data/train_sample.csv')
+
+            # sample = train_df.sample(utils.N_IMAGES, random_state=0).reset_index(drop=True).copy()
+            # train_sample, test_sample = train_test_split(sample, test_size=0.2).copy()
+            # test_sample.to_csv('./data/test_sample.csv')
+            # train_sample.to_csv('./data/train_sample.csv')
         else:
-            train_sample, test_sample = train_test_split(train_df, test_size=0.2, stratify=train_df['category_id']).copy()  # at least n=64500 / 2,257,759
-            test_sample.to_csv('./data/test_sample.csv')
+            pass
+            # train_sample, test_sample = train_test_split(train_df, test_size=0.2, stratify=train_df['category_id']).copy()  # at least n=64500 / 2,257,759
+            # test_sample.to_csv('./data/test_sample.csv')
         filenames_to_scatter = np.array_split(train_sample, size)
 
     my_filenames = comm.scatter(filenames_to_scatter, root=0)
