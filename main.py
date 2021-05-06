@@ -1,15 +1,9 @@
-from pycocotools.coco import COCO
+
 from mpi4py import MPI
 import json
-from datetime import datetime
 import pandas as pd
 import logging
 import numpy as np
-import matplotlib.pyplot as plt
-import sklearn  # For LabelEncoder and Metrics
-from sklearn import preprocessing  # For the 🏷 Label Encoder
-import albumentations  # For Image Augmentations
-import shutil
 from sklearn.model_selection import train_test_split
 from torchvision import models, transforms
 import utils
@@ -168,7 +162,7 @@ def main():
 
         end_time = MPI.Wtime()
         LOGGER.info("_Epoch: {} | Train Loss: {} | Time: {}".format(epoch, tr_loss/len(train_loader), end_time - init_time))
-        if rank == 0: # FIXME: Move model evaluation outside the for loop, its lagging the other processes
+        if rank == 0:  # FIXME: Move model evaluation outside the for loop, its lagging the other processes
             checkpoint = {
                 'epoch': epoch,
                 'state_dict': model.state_dict(),
@@ -179,17 +173,17 @@ def main():
             save_checkpoint(checkpoint, epoch, utils.CHECKPOINT_DIR, utils.MODELS_DIR)
             LOGGER.info("_Checkpoint saved")
             LOGGER.info("_Evaluating model")
-            running_corrects = 0
-            model.eval()
-            for i, (images, labels) in enumerate(val_loader):
-                images = images.to(device)
-                labels = labels.to(device)
-                with torch.no_grad():
-                    outputs = model(images)
-                _, preds = torch.max(outputs, 1)
-                running_corrects += torch.sum(preds == labels.data)
-            epoch_acc = running_corrects.double() / len(val_loader.dataset)
-            LOGGER.info("_Epoch: {} | Acc: {}".format(epoch, epoch_acc))
+            # running_corrects = 0
+            # model.eval()
+            # for i, (images, labels) in enumerate(val_loader):
+            #     images = images.to(device)
+            #     labels = labels.to(device)
+            #     with torch.no_grad():
+            #         outputs = model(images)
+            #     _, preds = torch.max(outputs, 1)
+            #     running_corrects += torch.sum(preds == labels.data)
+            # epoch_acc = running_corrects.double() / len(val_loader.dataset)
+            # LOGGER.info("_Epoch: {} | Acc: {}".format(epoch, epoch_acc))
     # TODO: Construct the distributed prediction pipeline
 
 

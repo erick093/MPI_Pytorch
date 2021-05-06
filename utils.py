@@ -10,7 +10,7 @@ MODEL_NAME = 'densenet'
 Debugging Constants
 """
 DEBUG = True
-N_IMAGES = 1000
+N_IMAGES = 50000
 NUM_CLASSES = 64500
 
 """
