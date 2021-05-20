@@ -14,8 +14,9 @@ pip install foobar
 
 
 ```bash
-mpiexec -n 2 python -m mpi4py ex_mpi.py
+mpiexec -n 2 python -m mpi4py main.py
 ```
+checkpoints: C:\Users\erick\.cache\torch\hub\checkpoints
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

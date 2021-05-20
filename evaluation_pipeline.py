@@ -1,11 +1,9 @@
 import pandas as pd
-import numpy as np
 import torch
 import os
 import sys
 from mpi4py import MPI
 from PIL import Image
-from helpers import load_checkpoint
 import utils
 import torch.nn as nn
 from torchvision import models, transforms

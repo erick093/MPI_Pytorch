@@ -1,10 +1,10 @@
 """
 Utils.py
 """
-FROM_CHECKPOINT = True
+FROM_CHECKPOINT = False
 VALIDATE = True
-CHECKPOINT_NAME = 'checkpoint.pt'
-MODEL_NAME = 'densenet'
+CHECKPOINT_NAME = 'checkpoint2.pt'
+MODEL_NAME = 'resnet34'
 
 """
 Debugging Constants
@@ -16,11 +16,11 @@ NUM_CLASSES = 64500
 """
 Directories
 """
-TRAIN_DIR: str = "D:/Huge Data Set/train/"
+TRAIN_DIR: str = "./project/MPI_Pytorch/data/train/"
 TRAIN_FILE: str = "metadata.json"
-TEST_DIR: str = "D:/Huge Data Set/test/"
-CHECKPOINT_DIR: str = "./checkpoints/"
-MODELS_DIR: str = "./models/"
+TEST_DIR: str = "./project/MPI_Pytorch/data/test/"
+CHECKPOINT_DIR: str = "./project/MPI_Pytorch/checkpoints/"
+MODELS_DIR: str = "./project/MPI_Pytorch/models/"
 """
 Image constants
 """
@@ -31,5 +31,7 @@ Training constants
 """
 BATCH_SIZE = 128
 LR = 4e-4
-NUM_EPOCHS = 1
-FEATURE_EXTRACT = False
+NUM_EPOCHS = 2
+FEATURE_EXTRACT = False  # Flag for feature extracting. When False, we fine-tune the whole model,
+                         # when True we only update the reshaped layer params
+USE_PRETRAINED = True # Flag for using pretrained model or not

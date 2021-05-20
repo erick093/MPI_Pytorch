@@ -1,0 +1,6 @@
+# ignore data,models,checkpoints folder
+data/*
+models/*
+checkpoints/*
+
+

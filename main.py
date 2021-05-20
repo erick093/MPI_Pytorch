@@ -1,11 +1,10 @@
-
 from mpi4py import MPI
-import json
+
 import pandas as pd
 import logging
 import numpy as np
 from sklearn.model_selection import train_test_split
-from torchvision import models, transforms
+from torchvision import transforms
 import utils
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -14,6 +13,7 @@ from data_loader import GetData
 import mpi_tools
 from helpers import load_checkpoint, save_checkpoint
 from models import initialize_model
+
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()  # process rank
 size = comm.Get_size()  # number of workers
@@ -47,73 +47,33 @@ if rank == 0:
     LOGGER.info('Logger Initialized')
 
 
-def read_json(input_file):
-    try:
-        with open(input_file, "r", encoding="ISO-8859-1") as file:
-            ann_file = json.load(file)
-        return ann_file
-    except OSError as err:
-        print("OS error: {0}".format(err))
-
-
-# def save_checkpoint(state, epoch, checkpoint_dir, best_model_dir, is_best=True):
-#     #f_path = checkpoint_dir / 'checkpoint_{}.pt'.format(epoch)
-#     f_path = checkpoint_dir + 'checkpoint.pt'
-#     torch.save(state, f_path)
-#     if is_best:
-#         best_fpath = best_model_dir + 'best_model.pt'
-#         shutil.copyfile(f_path, best_fpath)
-#
-#
-# def load_checkpoint(checkpoint_fpath, model, optimizer):
-#     checkpoint = torch.load(checkpoint_fpath)
-#     model.load_state_dict(checkpoint['state_dict'])
-#     optimizer.load_state_dict(checkpoint['optimizer'])
-#     return model, optimizer, checkpoint['epoch']
-
-
-def create_dataframe(ann_file):
-    _img = pd.DataFrame(ann_file['images'])
-    _ann = pd.DataFrame(ann_file['annotations']).drop(columns='image_id')
-    df = _img.merge(_ann, on='id')
-    return df
-
-
 def main():
-    device = 'cpu'  # don't use cuda, causes an O.S crash
-    torch.set_num_threads(1)
-    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = 'cpu'  # don't use cuda, causes an OS crash
+    torch.set_num_threads(1)  # deactivate torch default parallelism
     filenames_to_scatter = None
+    # define image transformations:
+    # 1. Transform Images to Tensors
+    # 2. Resize images to a given WIDTH and HEIGHT
+    # 3. Normalize a tensor image with mean and standard deviation
     Transform = transforms.Compose(
         [transforms.ToTensor(),
          transforms.Resize((utils.WIDTH, utils.HEIGHT)),
          transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
-    # Transform = transforms.Compose([
-    #     transforms.RandomResizedCrop(utils.WIDTH),
-    #     transforms.RandomHorizontalFlip(),
-    #     transforms.ToTensor(),
-    #     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    #      ])
     if rank == 0:
         # train_input_file = utils.TRAIN_DIR + utils.TRAIN_FILE
         # ann_file = read_json(train_input_file)
-        # LOGGER.info("JSON Train File Read")
-        # train_df = create_dataframe(ann_file)
-        # LOGGER.info("Train DataFrame Created")
+        LOGGER.info("Reading Training & Testing samples")
 
         if utils.DEBUG:
-            df_test = pd.read_csv("./data/test_sample.csv")
+            df_test = pd.read_csv("./project/MPI_Pytorch/data/train_sample.csv")
+            # df_test = pd.read_csv("./data/train_sample.csv")
             sample = df_test.sample(1000, random_state=0).reset_index(drop=True).copy()
             train_sample, test_sample = train_test_split(sample, test_size=0.2).copy()
-
-            # sample = train_df.sample(utils.N_IMAGES, random_state=0).reset_index(drop=True).copy()
-            # train_sample, test_sample = train_test_split(sample, test_size=0.2).copy()
-            # test_sample.to_csv('./data/test_sample.csv')
-            # train_sample.to_csv('./data/train_sample.csv')
         else:
             pass
-            # train_sample, test_sample = train_test_split(train_df, test_size=0.2, stratify=train_df['category_id']).copy()  # at least n=64500 / 2,257,759
-            # test_sample.to_csv('./data/test_sample.csv')
+            train_sample = pd.read_csv("./project/MPI_Pytorch/data/train_sample.csv")
+            test_sample = pd.read_csv("./project/MPI_Pytorch/data/test_sample.csv")
+
         filenames_to_scatter = np.array_split(train_sample, size)
 
     my_filenames = comm.scatter(filenames_to_scatter, root=0)
@@ -125,7 +85,7 @@ def main():
     LOGGER.info("_Training Loader Created")
     if rank == 0 and utils.VALIDATE:
         # uncomment to use the test_sample
-        # val_set = GetData(Dir=utils.TRAIN_DIR, FNames=test_sample['file_name'].values,
+        # val_set = GetData(Dir=utils.TEST_DIR, FNames=test_sample['file_name'].values,
         #                   Labels=test_sample['category_id'].values, Transform=Transform)
         val_set = GetData(Dir=utils.TRAIN_DIR, FNames=train_sample['file_name'].values,
                           Labels=train_sample['category_id'].values, Transform=Transform)
@@ -133,11 +93,12 @@ def main():
         val_loader = DataLoader(val_set, batch_size=utils.BATCH_SIZE, shuffle=False)
         LOGGER.info("_Validation Loader Created")
     # TODO: Add support for pretrained models from pytorch (uncomment the commented lines to activate this)
-    # model, input_size = initialize_model(utils.MODEL_NAME, utils.NUM_CLASSES, utils.FEATURE_EXTRACT, use_pretrained=True)
-    model = models.resnet34()
-    model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
+    model, input_size = initialize_model(utils.MODEL_NAME, utils.NUM_CLASSES, utils.FEATURE_EXTRACT,
+                                         use_pretrained=True)
+    # model = models.resnet34()
+    # model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
     # params_to_update = model.parameters()
-    LOGGER.info("_Model Created")
+    LOGGER.info("_Model Created: {}".format(utils.MODEL_NAME))
     optimizer = torch.optim.Adam(model.parameters(), lr=utils.LR)
     # optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
     LOGGER.info("_Optimizer Created")
@@ -166,30 +127,31 @@ def main():
             tr_loss += loss.detach().item()
 
         end_time = MPI.Wtime()
-        LOGGER.info("_Epoch: {} | Train Loss: {} | Time: {}".format(epoch, tr_loss/len(train_loader), end_time - init_time))
+        LOGGER.info(
+            "_Epoch: {} | Train Loss: {} | Time: {}".format(epoch, tr_loss / len(train_loader), end_time - init_time))
         if rank == 0:  # FIXME: Move model evaluation outside the for loop, its lagging the other processes
             checkpoint = {
                 'epoch': epoch,
                 'state_dict': model.state_dict(),
                 'optimizer': optimizer.state_dict(),
-                'loss': tr_loss/len(train_loader)
+                'loss': tr_loss / len(train_loader)
             }
             LOGGER.info("_Creating a checkpoint at epoch {}".format(epoch))
             save_checkpoint(checkpoint, epoch, utils.CHECKPOINT_DIR, utils.MODELS_DIR)
             LOGGER.info("_Checkpoint saved")
-            LOGGER.info("_Evaluating model")
-            # running_corrects = 0
-            # model.eval()
-            # for i, (images, labels) in enumerate(val_loader):
-            #     images = images.to(device)
-            #     labels = labels.to(device)
-            #     with torch.no_grad():
-            #         outputs = model(images)
-            #     _, preds = torch.max(outputs, 1)
-            #     running_corrects += torch.sum(preds == labels.data)
-            # epoch_acc = running_corrects.double() / len(val_loader.dataset)
-            # LOGGER.info("_Epoch: {} | Acc: {}".format(epoch, epoch_acc))
-    # TODO: Construct the distributed prediction pipeline
+            if utils.VALIDATE:
+                LOGGER.info("_Evaluating model")
+                running_corrects = 0
+                model.eval()
+                for i, (images, labels) in enumerate(val_loader):
+                    images = images.to(device)
+                    labels = labels.to(device)
+                    with torch.no_grad():
+                        outputs = model(images)
+                    _, preds = torch.max(outputs, 1)
+                    running_corrects += torch.sum(preds == labels.data)
+                epoch_acc = running_corrects.double() / len(val_loader.dataset)
+                LOGGER.info("_Epoch: {} | Acc: {}".format(epoch, epoch_acc))
 
 
 if __name__ == '__main__':

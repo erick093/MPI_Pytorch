@@ -1144,3 +1144,221 @@ INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
 INFO:Herbarium_R0:_Checkpoint saved
 INFO:Herbarium_R0:_Evaluating model
 INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.8625
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:_Files Received: 200
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Dataset Object Created
+barium_R0:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R3:_Model Created
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R2:_Model Created
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:_Model loaded to CPU
+INFO:Herbarium_R2:_Model loaded to CPU
+p
+INFO:Herbarium_R3:_Model loaded to CPU
+p
+INFO:Herbarium_R3:_Entering training Loop
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:_Files Received: 400
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.31279468536377 | Time: 130.36832939996384
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.279663801193237 | Time: 130.3791553999763
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R1:_Files Received: 400
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R1:_Model Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:_Model Created
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.283726692199707 | Time: 109.22031900007278
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.54046893119812 | Time: 90.88390269991942
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 9.515456199645996 | Time: 93.62658619997092
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:_Files Received: 200
+INFO:Herbarium_R2:_Training Dataset ObjeINFO:HerbariINFO:Herbarium_R0:_Training Dataset Object CINFO:HerINFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R2:_Files Received: 200
+INFO:Herbarium_R1:_Training Dataset ObjeINFO:Herbarium_R2:_Training Dataset Object Created
+ct Created
+INFO:Herbarium_R0:_Training Loader Created
+reated
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R1:_Files Received: 200
+INFO:Herbarium_R0:_Files Received: 200
+ct Created
+INFO:Herbarium_R3:_Files Received: 200
+ct Created
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:_Files Received: 200
+INFO:Herbarium_R1:_Training Dataset ObjeINFO:HerbariINFO:Herbarium_R3:_Training Dataset Object Created
+barium_R0:_Training Loader Created
+INFO:Herbarium_R3:_Training Loader Created
+INFO:Herbarium_R3:_Model Created: resnet18
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R1:_Model Created: resnet18
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R2:_Model Created: resnet18
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R0:_Model Created: resnet18
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R3:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.405637741088867 | Time: 91.16575369999919
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.400299549102783 | Time: 91.20045639999444
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 11.405733585357666 | Time: 91.18003659999522
+INFO:Herbarium_R3:_Epoch: 0 | Train Loss: 11.322511672973633 | Time: 91.19693310000002
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R1:_Files Received: 200
+INFO:Herbarium_R2:_Files Received: 200
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+reated
+INFO:Herbarium_R2:_Training Loader CreatINFOINFO:Herbarium_R0:_Training Dataset Object CreatINFOINFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R2:_Model Created: resnet18
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R1:_Model Created: resnet18
+INFO:Herbarium_R0:_Model Created: resnet18
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R3:_Model Created: resnet18
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R3:_Epoch: 0 | Train Loss: 11.356396675109863 | Time: 51.0014555999951
+
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.406901836395264 | Time: 51.02930519999063
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.422128677368164 | Time: 51.010210699998424
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.057080745697021 | Time: 44.365363000004436INFO:Herbarium_R3:_Epoch: 1 | Train Loss: 9.07171630859375 | Time: 45.86706669999694
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 9.148263931274414 | Time: 45.885363499997766
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R1:_Files Received: 200
+INFO:Herbarium_R2:_Files Received: 200
+INFO:Herbarium_R0:_Files Received: 200
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R2:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+INFO:Herbarium_R2:_Training Loader Created
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R3:_Files Received: 200
+INFO:Herbarium_R0:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R3:_Training Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R3:_Training Loader Created
+INFO:Herbarium_R1:_Model Created: resnet18
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R2:_Model Created: resnet18
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R0:_Model Created: resnet18
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R3:_Model Created: resnet18
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R3:_Model loaded to CPU
+p
+INFO:Herbarium_R3:_Entering training Loop
+INFO:Herbarium_R0:_Entering training Loop
+INFO:Herbarium_R0:_Epoch: 0 | Train Loss: 11.402866840362549 | Time: 59.317197700002
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.345008373260498 | Time: 59.37794869999925
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 11.35962724685669 | Time: 59.33492999999726
+INFO:Herbarium_R3:_Epoch: 0 | Train Loss: 11.47173023223877 | Time: 59.348597100004554
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.0
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 9.182724475860596 | Time: 97.2549607999972
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.199819087982178 | Time: 33.56658349999634
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R3:_Epoch: 1 | Train Loss: 9.261451721191406 | Time: 97.2406420000043
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 9.196481704711914 | Time: 97.27469000000565
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.035
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R3:_Files Received: 200
+INFO:Herbarium_R0:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+reated
+INFO:Herbarium_R3:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R1:_Model Created: resnet34
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R0:Logger Initialized
+INFO:Herbarium_R0:_Files Received: 200
+INFO:Herbarium_R1:_Training Dataset Object Created
+INFO:Herbarium_R1:_Training Loader Created
+reated
+INFO:Herbarium_R3:_Training Loader Created
+INFO:Herbarium_R0:_Validation Dataset Object Created
+INFO:Herbarium_R0:_Validation Loader Created
+INFO:Herbarium_R2:_Model Created: resnet34
+INFO:Herbarium_R2:_Optimizer Created
+INFO:Herbarium_R1:_Model Created: resnet34
+INFO:Herbarium_R1:_Optimizer Created
+INFO:Herbarium_R3:_Model Created: resnet34
+INFO:Herbarium_R3:_Optimizer Created
+INFO:Herbarium_R0:_Model Created: resnet34
+INFO:Herbarium_R0:_Optimizer Created
+INFO:Herbarium_R1:_Model loaded to CPU
+INFO:Herbarium_R1:_Entering training Loop
+INFO:Herbarium_R2:_Model loaded to CPU
+INFO:Herbarium_R2:_Entering training Loop
+INFO:Herbarium_R2:_Epoch: 0 | Train Loss: 11.427484512329102 | Time: 113.72122650002711INFO:Herbarium_R3:_Epoch: 0 | Train Loss: 11.313763618469238 | Time: 113.73515270001371
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 0
+INFO:Herbarium_R1:_Epoch: 0 | Train Loss: 11.308388233184814 | Time: 113.77801879998879
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 0 | Acc: 0.00125
+INFO:Herbarium_R1:_Epoch: 1 | Train Loss: 9.096983909606934 | Time: 121.87445219999063
+INFO:Herbarium_R0:_Epoch: 1 | Train Loss: 9.228868961334229 | Time: 43.82533650001278
+INFO:Herbarium_R3:_Epoch: 1 | Train Loss: 9.119794845581055 | Time: 121.91478160000406
+INFO:Herbarium_R0:_Creating a checkpoint at epoch 1
+INFO:Herbarium_R2:_Epoch: 1 | Train Loss: 9.226495265960693 | Time: 121.92779210000299
+INFO:Herbarium_R0:_Checkpoint saved
+INFO:Herbarium_R0:_Evaluating model
+INFO:Herbarium_R0:_Epoch: 1 | Acc: 0.035
