@@ -16,7 +16,8 @@ NUM_CLASSES = 64500
 """
 Directories
 """
-TRAIN_DIR: str = "./project/MPI_Pytorch/data/train/"
+# TRAIN_DIR: str = "./project/MPI_Pytorch/data/train/"
+TRAIN_DIR: str = "./data/img/train/"
 TRAIN_FILE: str = "metadata.json"
 TEST_DIR: str = "./project/MPI_Pytorch/data/test/"
 CHECKPOINT_DIR: str = "./project/MPI_Pytorch/checkpoints/"

@@ -11,6 +11,8 @@ pip install foobar
 ```
 
 ## Usage
+Connection:
+login.hpc.vub.be // vsc10458
 
 
 ```bash

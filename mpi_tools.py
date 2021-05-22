@@ -3,14 +3,23 @@ import numpy as np
 
 
 def num_procs():
+    """
+    :return: Number of processes
+    """
     return MPI.COMM_WORLD.Get_size()
 
 
 def all_reduce(*args, **kwargs):
+    """
+    MPI.ALLreduce reduces the values and distribute the results to all the processes, the reduce operation is MPI.SUM
+    """
     return MPI.COMM_WORLD.Allreduce(*args, **kwargs)
 
 
 def mpi_op(x, op):
+    """
+    Executes the all_reduce function, and stores the value in buff, checks if value is scalar or not
+    """
     x, scalar = ([x], True) if np.isscalar(x) else (x, False)
     x = np.asarray(x, dtype=np.float32)
     buff = np.zeros_like(x, dtype=np.float32)
@@ -19,10 +28,16 @@ def mpi_op(x, op):
 
 
 def broadcast(x, root=0):
+    """
+    broadcast the values of x to the root node
+    """
     MPI.COMM_WORLD.Bcast(x, root=root)
 
 
 def mpi_sum(x):
+    """
+    Executes the MPI.SUM operation
+    """
     return mpi_op(x, MPI.SUM)
 
 

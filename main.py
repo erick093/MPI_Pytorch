@@ -137,7 +137,7 @@ def main():
                 'loss': tr_loss / len(train_loader)
             }
             LOGGER.info("_Creating a checkpoint at epoch {}".format(epoch))
-            save_checkpoint(checkpoint, epoch, utils.CHECKPOINT_DIR, utils.MODELS_DIR)
+            save_checkpoint(checkpoint, epoch, utils.MODEL_NAME, utils.CHECKPOINT_DIR, utils.MODELS_DIR)
             LOGGER.info("_Checkpoint saved")
             if utils.VALIDATE:
                 LOGGER.info("_Evaluating model")

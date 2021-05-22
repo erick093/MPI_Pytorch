@@ -3,12 +3,25 @@ import torch.nn as nn
 
 
 def set_parameter_requires_grad(model, feature_extracting):
+    """
+    Function that sets the parameters of the model that will be fine-tuned
+    :param model: pytorch model
+    :param feature_extracting: boolean flag for feature extracting. When False, we fine-tune the whole model,
+    """
     if feature_extracting:
         for param in model.parameters():
             param.requires_grad = False
 
 
 def initialize_model(model_name, num_classes, feature_extract, use_pretrained=True):
+    """
+    Initialize the computer vision model, can be  pretrained or not.
+    :param model_name: name of the pytorch model
+    :param num_classes: number of classes
+    :param feature_extract:
+    :param use_pretrained: When True, a pretrained model will be loaded
+    :return: model, image input size
+    """
     # Initialize these variables which will be set in this if statement. Each of these
     #   variables is model specific.
     model_ft = None
