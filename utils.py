@@ -32,7 +32,7 @@ Training constants
 """
 BATCH_SIZE = 128
 LR = 4e-4
-NUM_EPOCHS = 2
+NUM_EPOCHS = 10
 FEATURE_EXTRACT = False  # Flag for feature extracting. When False, we fine-tune the whole model,
                          # when True we only update the reshaped layer params
 USE_PRETRAINED = True # Flag for using pretrained model or not
