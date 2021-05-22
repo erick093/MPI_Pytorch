@@ -65,7 +65,7 @@ def main():
         LOGGER.info("Reading Training & Testing samples")
 
         if utils.DEBUG:
-            df_test = pd.read_csv("./project/project_git/MPI_Pytorch/data/train_sample.csv")
+            df_test = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
             # df_test = pd.read_csv("./data/train_sample.csv")
             sample = df_test.sample(1000, random_state=0).reset_index(drop=True).copy()
             train_sample, test_sample = train_test_split(sample, test_size=0.2).copy()
