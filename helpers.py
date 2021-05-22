@@ -3,8 +3,8 @@ import torch
 
 def save_checkpoint(state, epoch, model_name, checkpoint_dir, best_model_dir, is_best=True):
     """ Save a train checkpoint in checkpoint_dir, save best model in best_model_dir"""
-    # f_path = checkpoint_dir + 'checkpoint_{}_{}.pt'.format(model_name, epoch)
-    f_path = checkpoint_dir + 'checkpoint.pt'
+    f_path = checkpoint_dir + 'checkpoint_{}.pt'.format(model_name)
+    # f_path = checkpoint_dir + 'checkpoint.pt'
     torch.save(state, f_path)
     # if is_best:
     #     best_fpath = best_model_dir + 'best_model.pt'

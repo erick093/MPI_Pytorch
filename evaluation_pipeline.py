@@ -81,7 +81,7 @@ def predict(dataset_size):
     # model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
     # model.load_state_dict(torch.load('./models/best_model.pt'))
     # model.load_state_dict(torch.load('./checkpoints/checkpoint_{}_{}.pt'.format(utils.MODEL_NAME, utils.NUM_EPOCHS-1))['state_dict'])
-    model.load_state_dict(torch.load('./checkpoints/checkpoint_{}.pt'.format(utils.NUM_EPOCHS-1))['state_dict'])
+    model.load_state_dict(torch.load('./project/project_git/MPI_Pytorch/checkpoints/checkpoint_{}.pt'.format(utils.MODEL_NAME))['state_dict'])
     model.eval()
     running_corrects = 0
     while True:
@@ -102,7 +102,7 @@ def predict(dataset_size):
 
 def pipeline():
     if rank == 0:
-        df = pd.read_csv("./data/train_sample.csv")[:100]
+        df = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
         # assign a predictor node for each image, the nodes are assigned from the uniform distribution of
         # numpy rand int
         df["node_predictor"] = np.random.randint(low=3, high=size, size=df.shape[0])
