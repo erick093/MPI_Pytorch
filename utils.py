@@ -1,10 +1,11 @@
 """
 Utils.py
 """
-FROM_CHECKPOINT = False
-VALIDATE = True
-CHECKPOINT_NAME = 'checkpoint2.pt'
 MODEL_NAME = 'resnet34'
+FROM_CHECKPOINT = True
+VALIDATE = True
+CHECKPOINT_NAME = 'checkpoint_{}.pt'.format(MODEL_NAME)
+
 
 """
 Debugging Constants
