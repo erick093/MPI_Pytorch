@@ -22,7 +22,7 @@ class GetData(Dataset):
 
     def __len__(self):
         """
-        :return:
+        :return: length of dataset
         """
         return len(self.fnames)
 

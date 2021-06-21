@@ -4,61 +4,52 @@ import numpy as np
 
 def num_procs():
     """
+    Return the total number of processes
     :return: Number of processes
     """
     return MPI.COMM_WORLD.Get_size()
 
 
-def all_reduce(*args, **kwargs):
+def mpi_all_reduce(*args, **kwargs):
     """
     MPI.ALLreduce reduces the values and distribute the results to all the processes, the reduce operation is MPI.SUM
+    :return:
     """
     return MPI.COMM_WORLD.Allreduce(*args, **kwargs)
 
 
-def mpi_op(x, op):
+def mpi_sum(x, op):
     """
     Executes the all_reduce function, and stores the value in buff, checks if value is scalar or not
     """
     x, scalar = ([x], True) if np.isscalar(x) else (x, False)
     x = np.asarray(x, dtype=np.float32)
     buff = np.zeros_like(x, dtype=np.float32)
-    all_reduce(x, buff, op=op)
+    mpi_all_reduce(x, buff, op=op)
     return buff[0] if scalar else buff
 
 
-def broadcast(x, root=0):
+def mpi_avg_grads(model):
+    """ Average the gradients across all MPI processes. """
+    if num_procs() == 1:  # if number of processes is 1, then return none
+        return None
+    for p in model.parameters():
+        p_grad_numpy = p.grad.numpy()  # convert tensor to numpy array
+        avg_p_grad = mpi_sum(p.grad, MPI.SUM) / num_procs()  # sum all the gradients of every process and average them
+        p_grad_numpy[:] = avg_p_grad[:]
+
+
+def mpi_broadcast(x, root=0):
     """
-    broadcast the values of x to the root node
+    Broadcast the values of x to the root node
     """
     MPI.COMM_WORLD.Bcast(x, root=root)
 
 
-def mpi_sum(x):
-    """
-    Executes the MPI.SUM operation
-    """
-    return mpi_op(x, MPI.SUM)
-
-
-def mpi_avg(x):
-    return mpi_sum(x) / num_procs()
-
-
-def mpi_avg_grads(module):
-    """ Average contents of gradient buffers across MPI processes. """
+def sync_params(model):
+    """ Synchronize the parameters of a model across all MPI processes. """
     if num_procs() == 1:
-        return
-    for p in module.parameters():
-        p_grad_numpy = p.grad.numpy()  # numpy view of tensor data
-        avg_p_grad = mpi_avg(p.grad)
-        p_grad_numpy[:] = avg_p_grad[:]
-
-
-def sync_params(module):
-    """ Sync all parameters of module across all MPI processes. """
-    if num_procs() == 1:
-        return
-    for p in module.parameters():
+        return None
+    for p in model.parameters():
         p_numpy = p.data.numpy()
-        broadcast(p_numpy)
+        mpi_broadcast(p_numpy)

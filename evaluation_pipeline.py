@@ -17,11 +17,21 @@ size = comm.Get_size()
 
 
 def send_to_predictors(message):
-    for i in range(size-3):
-        comm.send(message, dest=i+3)
+    """
+
+    :param message:
+    :return:
+    """
+    for i in range(size - 3):
+        comm.send(message, dest=i + 3)
 
 
 def read_images(df):
+    """
+
+    :param df:
+    :return:
+    """
     directory = utils.TRAIN_DIR
     data = list(zip(df["file_name"], df["category_id"], df["node_predictor"]))
     for (fname, category_id, node_predictor) in data:
@@ -33,6 +43,10 @@ def read_images(df):
 
 
 def resize_images():
+    """
+
+    :return:
+    """
     while True:
         pil_image, filename, category_id, node_predictor = comm.recv(source=0)
         if pil_image is None:
@@ -50,6 +64,10 @@ def resize_images():
 
 
 def preprocess_image():
+    """
+
+    :return:
+    """
     while True:
         pil_image, filename, category_id, node_predictor = comm.recv(source=1)
         if pil_image is None:
@@ -75,13 +93,21 @@ def preprocess_image():
 
 
 def predict(dataset_size):
+    """
+
+    :param dataset_size:
+    :return:
+    """
     device = 'cpu'
-    model, input_size = initialize_model(utils.MODEL_NAME, utils.NUM_CLASSES, use_pretrained=False, feature_extract=False)
+    model, input_size = initialize_model(utils.MODEL_NAME, utils.NUM_CLASSES, use_pretrained=False,
+                                         feature_extract=False)
     # model = models.resnet34()
     # model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
     # model.load_state_dict(torch.load('./models/best_model.pt'))
     # model.load_state_dict(torch.load('./checkpoints/checkpoint_{}_{}.pt'.format(utils.MODEL_NAME, utils.NUM_EPOCHS-1))['state_dict'])
-    model.load_state_dict(torch.load('./project/project_git/MPI_Pytorch/checkpoints/checkpoint_{}.pt'.format(utils.MODEL_NAME))['state_dict'])
+    model.load_state_dict(
+        torch.load('./project/project_git/MPI_Pytorch/checkpoints/checkpoint_{}.pt'.format(utils.MODEL_NAME))[
+            'state_dict'])
     model.eval()
     running_corrects = 0
     while True:
@@ -101,6 +127,10 @@ def predict(dataset_size):
 
 
 def pipeline():
+    """
+
+    :return:
+    """
     if rank == 0:
         df = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
         # assign a predictor node for each image, the nodes are assigned from the uniform distribution of
@@ -118,7 +148,5 @@ def pipeline():
         predict(dataset_size)
 
 
-
 if __name__ == '__main__':
-
     pipeline()

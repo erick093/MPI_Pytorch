@@ -22,11 +22,14 @@ TRAIN_FILE: str = "metadata.json"
 TEST_DIR: str = "./project/project_git/MPI_Pytorch/data/test/"
 CHECKPOINT_DIR: str = "./project/project_git/MPI_Pytorch/checkpoints/"
 MODELS_DIR: str = "./project/project_git/MPI_Pytorch/models/"
+
 """
 Image constants
 """
+
 WIDTH = 128
 HEIGHT = 128
+
 """
 Training constants
 """
