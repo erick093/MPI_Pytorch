@@ -153,7 +153,7 @@ def predict(dataset_size, totals):
         image, filename, label = comm.recv(source=2)
         if image is None:
             accuracy = running_corrects / dataset_size
-            comm.reduce(accuracy, totals, op=MPI.SUM, root=0)
+            comm.Reduce(accuracy, totals, op=MPI.SUM, root=0)
             LOGGER.info("Finished node {}, acc {}".format(rank, accuracy))
             break
         with torch.no_grad():
