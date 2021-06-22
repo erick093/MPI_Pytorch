@@ -129,7 +129,7 @@ def predict(dataset_size):
     #     torch.load('./project/project_git/MPI_Pytorch/checkpoints/checkpoint_{}.pt'.format(utils.MODEL_NAME))[
     #         'state_dict'])
     model.load_state_dict(
-        torch.load(utils.CHECKPOINT_DIR+utils.MODEL_NAME)[
+        torch.load(utils.CHECKPOINT_DIR+utils.MODEL_NAME+".pt")[
             'state_dict'])
     model.eval()
     running_corrects = 0
