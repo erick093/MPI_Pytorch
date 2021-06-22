@@ -15,10 +15,11 @@ The project consist in implementation of an Image Classifier using Deep Neural N
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/).
+To install all the requirements, execute the following command:
 
 ```bash
-pip install foobar
+pip install requirements.txt
 ```
 
 ## Usage
@@ -43,10 +44,19 @@ login.hpc.vub.be // vsc10458
 mpiexec -n 2 python -m mpi4py main.py
 ```
 checkpoints: C:\Users\erick\.cache\torch\hub\checkpoints
+## Development
+
+### Task 1: A simple neural network
+### Task 2: MPI parallelism
+### Task 3: Pipelining
+### Task 4: Balancing the training
+### Task 5: Deep Learning
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+Link to GitHub: https://github.com/erick093/MPI_Pytorch
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

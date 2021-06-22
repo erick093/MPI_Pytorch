@@ -22,7 +22,7 @@ def mpi_sum(x, op):
     """
     x, scalar = ([x], True) if np.isscalar(x) else (x, False)
     x = np.asarray(x, dtype=np.float32)
-    buff = np.zeros_like(x, dtype=np.float32)
+    buff = np.zeros_like(x, dtype=np.float32)  # create the buffer for All Reduce
     mpi_all_reduce(x, buff, op=op)
     return buff[0] if scalar else buff
 

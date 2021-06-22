@@ -61,7 +61,6 @@ def read_images(df):
     data = list(zip(df["file_name"], df["category_id"], df["node_predictor"]))
 
     for (fname, category_id, node_predictor) in data:
-
         # open each image stated in the dataframe
         pil_image = Image.open(os.path.join(directory, fname))
         # LOGGER.info("Node 0 sends: {}".format(fname))
@@ -131,7 +130,7 @@ def preprocess_image():
     send_to_predictors((None, None, None))
 
 
-def predict(dataset_size, totals):
+def predict(dataset_size):
     """
     Predict the labels of a transformed image
     :param totals:
@@ -153,9 +152,11 @@ def predict(dataset_size, totals):
         image, filename, label = comm.recv(source=2)
         if image is None:
             accuracy = running_corrects / dataset_size
-            comm.Reduce(accuracy, totals, op=MPI.SUM, root=0)
+            # comm.Reduce(accuracy, totals, op=MPI.SUM, root=0)
             LOGGER.info("Finished node {}, acc {}".format(rank, accuracy))
-            break
+            # acc = comm.reduce(accuracy, op=MPI.SUM, root=0)
+            return accuracy
+            # break
         with torch.no_grad():
             output = model(image[None, ...])
         _, pred = torch.max(output, 1)
@@ -172,7 +173,7 @@ def pipeline():
     3. Node 2 normalizes the images and transform them to tensors and send them to node [3,N] where N is number of nodes
     4. Nodes 3 to N loads a testing model & checkpoint and predicts the label of each image
     """
-    totals = None
+    acc = 0
     if rank == 0:
         LOGGER.info('Logger Initialized')
         df = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
@@ -187,7 +188,6 @@ def pipeline():
 
         # read the images from the dataframe
         read_images(df)
-        print("accuracy is:", totals)
 
     elif rank == 1:
         resize_images()
@@ -197,7 +197,11 @@ def pipeline():
 
     else:
         dataset_size = comm.recv(source=0)
-        predict(dataset_size, totals)
+        acc = predict(dataset_size)
+    sum = comm.reduce(acc, op=MPI.SUM, root=0)
+
+    if rank == 0:
+        LOGGER.info('Accuracy is {}'.format(sum))
 
 
 if __name__ == '__main__':
