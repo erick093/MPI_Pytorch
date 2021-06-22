@@ -121,16 +121,13 @@ def predict(dataset_size):
     # device = 'cpu'
     model, input_size = initialize_model(utils.MODEL_NAME, utils.NUM_CLASSES, use_pretrained=False,
                                          feature_extract=False)
-    # model = models.resnet34()
-    # model.fc = nn.Linear(512, utils.NUM_CLASSES, bias=True)
-    # model.load_state_dict(torch.load('./models/best_model.pt'))
-    # model.load_state_dict(torch.load('./checkpoints/checkpoint_{}_{}.pt'.format(utils.MODEL_NAME, utils.NUM_EPOCHS-1))['state_dict'])
-    # model.load_state_dict(
-    #     torch.load('./project/project_git/MPI_Pytorch/checkpoints/checkpoint_{}.pt'.format(utils.MODEL_NAME))[
-    #         'state_dict'])
+
+    # load trained model checkpoint
     model.load_state_dict(
-        torch.load(utils.CHECKPOINT_DIR+utils.MODEL_NAME+".pt")[
+        torch.load(utils.CHECKPOINT_DIR+"checkpoint_{}.pt".format(utils.MODEL_NAME))[
             'state_dict'])
+
+    # evaluate the input image
     model.eval()
     running_corrects = 0
     while True:
@@ -139,8 +136,6 @@ def predict(dataset_size):
             print("Finished node {}, acc {}".format(rank, running_corrects / dataset_size))
             sys.stdout.flush()
             break
-        # image = image.to(device)
-        # label = label.to(device)
         with torch.no_grad():
             output = model(image[None, ...])
         _, pred = torch.max(output, 1)
