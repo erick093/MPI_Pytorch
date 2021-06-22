@@ -3,17 +3,43 @@ import torch
 import os
 import sys
 from mpi4py import MPI
+import logging
 from PIL import Image
 import utils
 import torch.nn as nn
 from torchvision import models, transforms
 from models import initialize_model
 import numpy as np
-import mpi_tools
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
+
+
+# Creating a logger
+def init_logger(log_file: str = 'evaluation.log'):
+    # Specify the format
+    formatter = logging.Formatter('%(levelname)s:%(name)s_R{}:%(message)s'.format(rank))
+
+    # Create a StreamHandler Instance
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging.DEBUG)
+    stream_handler.setFormatter(formatter)
+
+    # Create a FileHandler Instance
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setFormatter(formatter)
+
+    # Create a logging.Logger Instance
+    logger = logging.getLogger('Herbarium')
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(stream_handler)
+    logger.addHandler(file_handler)
+
+    return logger
+
+
+LOGGER = init_logger()
 
 
 def send_to_predictors(message):
@@ -38,8 +64,7 @@ def read_images(df):
 
         # open each image stated in the dataframe
         pil_image = Image.open(os.path.join(directory, fname))
-        print('Node 0 sends', fname)
-        sys.stdout.flush()
+        LOGGER.info("Node 0 sends: {}".format(fname))
 
         # send the image to node 1
         comm.send((pil_image, fname, category_id, node_predictor), dest=1)
@@ -72,8 +97,7 @@ def resize_images():
 
         # send the resized image to node 2
         comm.send((resized_image, filename, category_id, node_predictor), dest=2)
-        print('Node 1 resized: ', filename)
-        sys.stdout.flush()
+        LOGGER.info("Node 1 resized: {}".format(filename))
 
     # send None 4-tuple when all resized-images are already sent to node 2
     comm.send((None, None, None, None), dest=2)
@@ -106,8 +130,7 @@ def preprocess_image():
 
         # send the image to the corresponding predictor node
         comm.send((normalized_img, filename, category_id), dest=node_predictor)
-        print('Node 2 preprocessed: ', filename)
-        sys.stdout.flush()
+        LOGGER.info("Node 2 preprocessed: {}".format(filename))
 
     # send None 4-tuple when all resized-images are already sent to predictor nodes
     send_to_predictors((None, None, None))
@@ -115,7 +138,7 @@ def preprocess_image():
 
 def predict(dataset_size):
     """
-
+    Predict the labels of a transformed image
     :param dataset_size:
     """
     # device = 'cpu'
@@ -124,7 +147,7 @@ def predict(dataset_size):
 
     # load trained model checkpoint
     model.load_state_dict(
-        torch.load(utils.CHECKPOINT_DIR+"checkpoint_{}.pt".format(utils.MODEL_NAME))[
+        torch.load(utils.CHECKPOINT_DIR + "checkpoint_{}.pt".format(utils.MODEL_NAME))[
             'state_dict'])
 
     # evaluate the input image
@@ -133,15 +156,13 @@ def predict(dataset_size):
     while True:
         image, filename, label = comm.recv(source=2)
         if image is None:
-            print("Finished node {}, acc {}".format(rank, running_corrects / dataset_size))
-            sys.stdout.flush()
+            LOGGER.info("Finished node {}, acc {}".format(rank, running_corrects / dataset_size))
             break
         with torch.no_grad():
             output = model(image[None, ...])
         _, pred = torch.max(output, 1)
         running_corrects += torch.sum(pred == label)
-        print("Node {} predicted {} for {} with true label: {}".format(rank, pred, filename, label))
-        sys.stdout.flush()
+        LOGGER.info("Node {} predicted {} for {} with true label: {}".format(rank, pred, filename, label))
 
 
 def pipeline():
@@ -154,6 +175,7 @@ def pipeline():
     4. Nodes 3 to N loads a testing model & checkpoint and predicts the label of each image
     """
     if rank == 0:
+        LOGGER.info('Logger Initialized')
         df = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
 
         # assign a predictor node for each image, the nodes are assigned from the uniform distribution of
