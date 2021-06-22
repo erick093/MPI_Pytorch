@@ -82,7 +82,12 @@ def main():
             test_sample = pd.read_csv("./project//project_git/MPI_Pytorch/data/test_sample.csv")
         # split the training dataset into to the total number of nodes
         filenames_to_scatter = np.array_split(train_sample, size)
-    # scatter the splits of the dataset from node 0 to all the nodes
+    # scatter the splits of the dataset from node 0 to all the nodes.
+    """
+    Why scatter the filenames(dataframe) instead of the raw bytes from an image?
+    Scattering the filenames instead of raw bytes is faster, it just need to scatter a few bytes instead of kilobytes.
+    Talking purely about the communication protocol between nodes (processes), it is faster to send bytes than kilobytes
+    """
     my_filenames = comm.scatter(filenames_to_scatter, root=0)
 
     """

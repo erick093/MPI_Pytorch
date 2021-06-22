@@ -2,10 +2,9 @@ from mpi4py import MPI
 import numpy as np
 
 
-def num_procs():
+def num_processes():
     """
     Return the total number of processes
-    :return: Number of processes
     """
     return MPI.COMM_WORLD.Get_size()
 
@@ -13,7 +12,6 @@ def num_procs():
 def mpi_all_reduce(*args, **kwargs):
     """
     MPI.ALLreduce reduces the values and distribute the results to all the processes, the reduce operation is MPI.SUM
-    :return:
     """
     return MPI.COMM_WORLD.Allreduce(*args, **kwargs)
 
@@ -31,11 +29,11 @@ def mpi_sum(x, op):
 
 def mpi_avg_grads(model):
     """ Average the gradients across all MPI processes. """
-    if num_procs() == 1:  # if number of processes is 1, then return none
+    if num_processes() == 1:  # if number of processes is 1, then return none
         return None
     for p in model.parameters():
         p_grad_numpy = p.grad.numpy()  # convert tensor to numpy array
-        avg_p_grad = mpi_sum(p.grad, MPI.SUM) / num_procs()  # sum all the gradients of every process and average them
+        avg_p_grad = mpi_sum(p.grad, MPI.SUM) / num_processes()  # sum all the gradients of every process and average them
         p_grad_numpy[:] = avg_p_grad[:]
 
 
@@ -48,7 +46,7 @@ def mpi_broadcast(x, root=0):
 
 def sync_params(model):
     """ Synchronize the parameters of a model across all MPI processes. """
-    if num_procs() == 1:
+    if num_processes() == 1:
         return None
     for p in model.parameters():
         p_numpy = p.data.numpy()
