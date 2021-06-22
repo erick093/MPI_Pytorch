@@ -64,7 +64,7 @@ def read_images(df):
 
         # open each image stated in the dataframe
         pil_image = Image.open(os.path.join(directory, fname))
-        LOGGER.info("Node 0 sends: {}".format(fname))
+        # LOGGER.info("Node 0 sends: {}".format(fname))
 
         # send the image to node 1
         comm.send((pil_image, fname, category_id, node_predictor), dest=1)
@@ -89,15 +89,10 @@ def resize_images():
 
         # resizing the image
         resized_image = pil_image.resize((utils.WIDTH, utils.HEIGHT))
-        # transform = transforms.Compose(
-        #     [
-        #         transforms.Resize((utils.WIDTH, utils.HEIGHT))
-        #     ])
-        # resized_image = transform(pil_image)
 
         # send the resized image to node 2
         comm.send((resized_image, filename, category_id, node_predictor), dest=2)
-        LOGGER.info("Node 1 resized: {}".format(filename))
+        # LOGGER.info("Node 1 resized: {}".format(filename))
 
     # send None 4-tuple when all resized-images are already sent to node 2
     comm.send((None, None, None, None), dest=2)
@@ -130,15 +125,16 @@ def preprocess_image():
 
         # send the image to the corresponding predictor node
         comm.send((normalized_img, filename, category_id), dest=node_predictor)
-        LOGGER.info("Node 2 preprocessed: {}".format(filename))
+        # LOGGER.info("Node 2 preprocessed: {}".format(filename))
 
     # send None 4-tuple when all resized-images are already sent to predictor nodes
     send_to_predictors((None, None, None))
 
 
-def predict(dataset_size):
+def predict(dataset_size, totals):
     """
     Predict the labels of a transformed image
+    :param totals:
     :param dataset_size:
     """
     # device = 'cpu'
@@ -156,13 +152,15 @@ def predict(dataset_size):
     while True:
         image, filename, label = comm.recv(source=2)
         if image is None:
-            LOGGER.info("Finished node {}, acc {}".format(rank, running_corrects / dataset_size))
+            accuracy = running_corrects / dataset_size
+            comm.reduce(accuracy, totals, op=MPI.SUM, root=0)
+            LOGGER.info("Finished node {}, acc {}".format(rank, accuracy))
             break
         with torch.no_grad():
             output = model(image[None, ...])
         _, pred = torch.max(output, 1)
         running_corrects += torch.sum(pred == label)
-        LOGGER.info("Node {} predicted {} for {} with true label: {}".format(rank, pred, filename, label))
+        # LOGGER.info("Node {} predicted {} for {} with true label: {}".format(rank, pred, filename, label))
 
 
 def pipeline():
@@ -174,6 +172,7 @@ def pipeline():
     3. Node 2 normalizes the images and transform them to tensors and send them to node [3,N] where N is number of nodes
     4. Nodes 3 to N loads a testing model & checkpoint and predicts the label of each image
     """
+    totals = None
     if rank == 0:
         LOGGER.info('Logger Initialized')
         df = pd.read_csv("./project/project_git/MPI_Pytorch/data/test_sample.csv")
@@ -188,6 +187,7 @@ def pipeline():
 
         # read the images from the dataframe
         read_images(df)
+        print("accuracy is:", totals)
 
     elif rank == 1:
         resize_images()
@@ -197,7 +197,7 @@ def pipeline():
 
     else:
         dataset_size = comm.recv(source=0)
-        predict(dataset_size)
+        predict(dataset_size, totals)
 
 
 if __name__ == '__main__':

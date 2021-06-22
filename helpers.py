@@ -7,7 +7,6 @@ def save_checkpoint(state, epoch, model_name, checkpoint_dir, best_model_dir, is
     torch.save(state, f_path)
 
 
-
 def load_checkpoint(checkpoint_fpath, model, optimizer):
     """ load a checkpoint to resume training """
     checkpoint = torch.load(checkpoint_fpath)
