@@ -2,7 +2,7 @@
 Utils.py
 """
 MODEL_NAME = 'resnet18'  # can be: [resnet18, resnet34, alexnet, vgg, squeezenet, densenet, inception]
-FROM_CHECKPOINT = True  # if true, training is resumed from latest checkpoint
+FROM_CHECKPOINT = False  # if true, training is resumed from latest checkpoint
 VALIDATE = True  # if true, a validation step is performed at the end of each epoch
 CHECKPOINT_NAME = 'checkpoint_{}.pt'.format(MODEL_NAME)
 
