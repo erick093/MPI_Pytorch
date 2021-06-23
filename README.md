@@ -67,8 +67,11 @@ For the pipelining of the testing procedure. We use a simple approach that pipel
 resize the image, preprocesses the image (normalize it) and input the image tensor to the model. This pipeline takes into
 account the total number of processes, where the first 3 processes are used for the first 3 task, and the rest of the processes
 are in charge of the model prediction part.
+
+**IMPORTANT: Remember to first start the training process for an architecture in order to create a checkpoint that will
+be used for the pipeline evaluation process.**
 ### Task 5: Deep Learning
-For this task we used 3 different CNN architectures, each for 10 epochs.
+For this task we used 2 different CNN architectures, each for 10 epochs.
 <table>
 <thead>
   <tr>
@@ -84,19 +87,9 @@ For this task we used 3 different CNN architectures, each for 10 epochs.
     <td>0.6931</td>
   </tr>
   <tr>
-    <td>Densenet</td>
-    <td>0.777777</td>
-    <td>0.7327</td>
-  </tr>
-  <tr>
     <td>Resnet18</td>
     <td>0.8862</td>
     <td>0.6938</td>
-  </tr>
-  <tr>
-    <td>VGG</td>
-    <td>0.737373</td>
-    <td>0.7624</td>
   </tr>
 </tbody>
 </table>
