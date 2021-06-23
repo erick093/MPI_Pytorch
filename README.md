@@ -84,15 +84,19 @@ For this task we used 2 different CNN architectures, each for 10 epochs.
   <tr>
     <td>Resnet 34</td>
     <td>0.626262</td>
-    <td>0.6931</td>
+    <td>0.1123</td>
   </tr>
   <tr>
-    <td>Resnet18</td>
+    <td>Resnet 18</td>
     <td>0.8862</td>
-    <td>0.6938</td>
+    <td>0.1962</td>
   </tr>
 </tbody>
 </table>
+It is important to mention that the Testing score is lower since the Trained process was done over a smaller part of the oririnal
+training dataset, this to shorten the training time.
+We could only test two models due to the storage restrictions of 6 GB imposed by hydra. Other CNN architectures require more storage space.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
