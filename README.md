@@ -73,7 +73,6 @@ For this task we used 3 different CNN architectures, each for 10 epochs.
 <thead>
   <tr>
     <th>Model name</th>
-    <th>Runtime (s)</th>
     <th>Validation score</th>
     <th>Testing Score</th>
   </tr>
@@ -81,25 +80,21 @@ For this task we used 3 different CNN architectures, each for 10 epochs.
 <tbody>
   <tr>
     <td>Resnet 34</td>
-    <td>6322</td>
     <td>0.626262</td>
     <td>0.6931</td>
   </tr>
   <tr>
     <td>Densenet</td>
-    <td>3621</td>
     <td>0.777777</td>
     <td>0.7327</td>
   </tr>
   <tr>
     <td>Resnet18</td>
-    <td>1794</td>
-    <td>0.717171</td>
+    <td>0.8862</td>
     <td>0.6938</td>
   </tr>
   <tr>
     <td>VGG</td>
-    <td>6539</td>
     <td>0.737373</td>
     <td>0.7624</td>
   </tr>
