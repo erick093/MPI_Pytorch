@@ -47,10 +47,64 @@ checkpoints: C:\Users\erick\.cache\torch\hub\checkpoints
 ## Development
 
 ### Task 1: A simple neural network
+We used different pre-defined Pytorch Computer Vision Architectures, among these architectures
+are: resnet18, resnet34, alexnet, vgg, squeezenet, densenet, inception.
+
+The PyTorch parallelism is disabled using 'torch.set_num_threads(1)'. For this task a well structured training
+model is defined. To reduce training time, we can set the constant DEBUG to True that will take a sample of the original
+training dataset and use it to train the selected CNN architecture.
+
 ### Task 2: MPI parallelism
+In order to distribute the training process, first we scatter the dataset to all the nodes. For this
+me use MPI.Scatter to distribute the dataset among all the nodes. The dataset is split equally among all the 
+processing nodes.
+
+The distributed training process is done using the method MPI Allreduce that reduces (applies a SUM operation)
+to gradients of each process. Each process the averages the sum according to the total number processes.
+
 ### Task 3: Pipelining
-### Task 4: Balancing the training
+For the pipelining of the testing procedure. We use a simple approach that pipeline the process of reading an image,
+resize the image, preprocesses the image (normalize it) and input the image tensor to the model. This pipeline takes into
+account the total number of processes, where the first 3 processes are used for the first 3 task, and the rest of the processes
+are in charge of the model prediction part.
 ### Task 5: Deep Learning
+For this task we used 3 different CNN architectures, each for 10 epochs.
+<table>
+<thead>
+  <tr>
+    <th>Model name</th>
+    <th>Runtime (s)</th>
+    <th>Validation score</th>
+    <th>Testing Score</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Resnet 34</td>
+    <td>6322</td>
+    <td>0.626262</td>
+    <td>0.6931</td>
+  </tr>
+  <tr>
+    <td>Densenet</td>
+    <td>3621</td>
+    <td>0.777777</td>
+    <td>0.7327</td>
+  </tr>
+  <tr>
+    <td>Resnet18</td>
+    <td>1794</td>
+    <td>0.717171</td>
+    <td>0.6938</td>
+  </tr>
+  <tr>
+    <td>VGG</td>
+    <td>6539</td>
+    <td>0.737373</td>
+    <td>0.7624</td>
+  </tr>
+</tbody>
+</table>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

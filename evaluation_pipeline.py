@@ -1,7 +1,6 @@
 import pandas as pd
 import torch
 import os
-import sys
 from mpi4py import MPI
 import logging
 from PIL import Image
@@ -133,7 +132,6 @@ def preprocess_image():
 def predict(dataset_size):
     """
     Predict the labels of a transformed image
-    :param totals:
     :param dataset_size:
     """
     # device = 'cpu'
@@ -152,11 +150,8 @@ def predict(dataset_size):
         image, filename, label = comm.recv(source=2)
         if image is None:
             accuracy = running_corrects / dataset_size
-            # comm.Reduce(accuracy, totals, op=MPI.SUM, root=0)
             LOGGER.info("Finished node {}, acc {}".format(rank, accuracy))
-            # acc = comm.reduce(accuracy, op=MPI.SUM, root=0)
             return accuracy
-            # break
         with torch.no_grad():
             output = model(image[None, ...])
         _, pred = torch.max(output, 1)
