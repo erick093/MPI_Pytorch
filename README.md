@@ -36,10 +36,6 @@ information in the `utils.py` file. The execution process of the project can be 
     
 
 
-Connection:
-login.hpc.vub.be // vsc10458
-
-
 ```bash
 mpiexec -n 2 python -m mpi4py main.py
 ```
