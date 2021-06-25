@@ -3,8 +3,6 @@
 
 **Email:** erick.emmanuel.escobar.gallardo@vub.be
 
-**Student ID:** 0573118
-
 **Date:** 23/06/21
 
 
