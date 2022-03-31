@@ -12,7 +12,7 @@ mpi4py == 3.0.3
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\evaluation_pipeline.py: 12
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\main.py: 4
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\mpi_tools.py: 2
-numpy == 1.19.2
+numpy == 1.21.0
 
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\create_dataset.py: 1
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\evaluation_pipeline.py: 1
