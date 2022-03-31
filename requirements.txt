@@ -2,7 +2,7 @@
 
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\data_loader.py: 3
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\evaluation_pipeline.py: 7
-Pillow == 8.2.0
+Pillow == 9.0.1
 
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\evaluation_pipeline.py: 5
 # C:\Users\erick\OneDrive\Documentos\ULB\Information Retrieval and Data Mining\data_mining\Project\main.py: 1
